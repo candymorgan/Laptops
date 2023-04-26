@@ -5,7 +5,7 @@ const Authentic = () => {
   return (
     <>
     <div className=' pt-24'>
-        <div className=' w-[1280px] mx-auto'>
+        <div className=' w-[80%] mx-auto'>
             <div className=' flex justify-between'>
                 <div className=' pt-36 leading-none'>
                     <h1 className='text-[64px]'>Buy <span className=' font-bold '> Authentic </span>Laptops<br/>without worrying</h1>

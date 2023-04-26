@@ -5,7 +5,7 @@ const Footer = () => {
     <>
     <div className=' h-[170px] bg-[#EEEEEE] pt-5 mt-40'>
         
-        <div className=' w-[1280px] mx-auto flex justify-between'>
+        <div className=' w-[80%] mx-auto flex justify-between'>
             <h1 className=' font-bold  text-3xl'>LAP<span className=' text-red-600 font-serif'>TOPS</span></h1>
 
             <div className=' flex gap-16 pt-2 font-medium'>

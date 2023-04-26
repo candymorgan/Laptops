@@ -8,28 +8,31 @@ import NavBar from "./Components/NavBar";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState([]);
-  const [numberOfItems, setNumberOfItems] = useState(0)
-  const [popUP, setPopUp] = useState(false)
-  const [totalPrice, setTotalPrice] = useState(0)
-  // const [price, setPrice] = useState(totalPrice)
+  const [numberOfItems, setNumberOfItems] = useState(0);
+  const [popUP, setPopUp] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [price, setPrice] = useState(totalPrice);
 
-  
-    const Item = (arrayItem) => {
-       setSelectedItem(arrayItem) 
-        setNumberOfItems(PrevNumberOfItems => PrevNumberOfItems + 1)
-        setTotalPrice(selectedItem.price)
-        // setPrice(prevTotalPrice => prevTotalPrice + selectedItem.price)
-        
-        
+  const Item = (arrayItem) => {
+    setSelectedItem([...selectedItem, arrayItem]);
+    setNumberOfItems((PrevNumberOfItems) => PrevNumberOfItems + 1);
+    setTotalPrice(arrayItem.price);
+    setPrice((prevTotalPrice) => prevTotalPrice + arrayItem.price);
+  };
+  // console.log(selectedItem);
 
-         
-    }
-    console.log(selectedItem);
-    
-  
   return (
     <>
-      <NavBar numberOfItems={numberOfItems} state={popUP} setState={setPopUp} selectedItem={selectedItem} totalPrice={totalPrice}/>
+      <NavBar
+        numberOfItems={numberOfItems}
+        state={popUP}
+        setState={setPopUp}
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+        price={price}
+        setNumberOfItems={setNumberOfItems}
+        setPrice={setPrice}
+      />
       <Authentic />
       <LaptopDisplay item={Item} />
       <Footer />

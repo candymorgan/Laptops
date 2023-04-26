@@ -1,8 +1,7 @@
 import React from 'react'
 import CartDisplay from '../CartDisplay'
-// import ItemSelection from '../ItemSelection'
 
-const NavBar = ({numberOfItems, state, setState, selectedItem, totalPrice}) => {
+const NavBar = ({numberOfItems, state, setState, selectedItem, setSelectedItem, price, setNumberOfItems, setPrice}) => {
     const closePopUp = () => {
         setState(false)
     }
@@ -12,7 +11,7 @@ const NavBar = ({numberOfItems, state, setState, selectedItem, totalPrice}) => {
     return (
         <>
             <div className=' fixed bg-white w-full shadow '>
-                <div className='w-[1280px] h-[71px] mx-auto p-4'>
+                <div className='w-[80%] h-[71px] mx-auto p-4'>
                     <div className='text-700 flex justify-between'>
                         <h1  className=' font-bold  text-3xl'>LAP<span className=' text-red-600 font-serif'>TOPS</span></h1>
                         <div onClick={() => setState(!state)} className=' pt-2'>
@@ -22,7 +21,12 @@ const NavBar = ({numberOfItems, state, setState, selectedItem, totalPrice}) => {
                         </svg>
                         <div className=' w-8 h-8 rounded-full text-center   bg-red-600 text-white relative bottom-10 left-4 text-lg'>{numberOfItems}</div>
                         </div>
-                        {state && <CartDisplay selectedItem={selectedItem} close={closePopUp} totalPrice={totalPrice} numberOfItems={numberOfItems}/>}
+                        {state && <CartDisplay selectedItem={selectedItem}
+                         close={closePopUp}
+                          totalPrice={price} 
+                          setSelectedItem={setSelectedItem}
+                          setNumberOfItems={setNumberOfItems}
+                          setPrice={setPrice}/>}
                         
                     </div>
                 </div>
