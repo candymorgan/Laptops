@@ -5,7 +5,7 @@ const CartDisplay = ({ selectedItem, close, totalPrice, setSelectedItem, setNumb
 
     return (
         <>
-            <div className=' w-[530px] h-[600px] border fixed top-[70px] flex end-0 rounded-lg bg-white '>
+            <div className=' w-[530px] h-[600px] border fixed top-[70px] flex end-0 rounded-lg bg-white max-sm:w-full'>
                 <div className=' w-full '>
                     <div className=' flex justify-between p-7 text-2xl font-medium border-b-2  '>
                         <h3>Cart</h3>
