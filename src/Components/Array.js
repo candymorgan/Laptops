@@ -43,7 +43,7 @@ export const array1 = [
     },
 
     {
-        name: " HP Pavilion",
+        name: "HP Pavilion",
         image: three,
         id: 5,
         price: 750
@@ -91,7 +91,7 @@ export const array1 = [
     },
 
     {
-        name: "Hp ThinkPad ",
+        name: "HP Thinkpad",
         image: nine,
         id: 11,
         price: 900
