@@ -23,7 +23,7 @@ const Footer = () => {
                     
 
                     <div className=' flex  justify-between w-[80%] mx-auto pt-6 max-sm:block'>
-                        <p>@2023 Candy Morgan inc. All Rights Reserved</p>
+                        <p>@2026 Candy Morgan inc. All Rights Reserved</p>
                         <div className=' flex gap-20'>
                             <p>Terms of Service</p>
                             <p>Privacy Policy</p>
